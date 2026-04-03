@@ -16,7 +16,10 @@ from groq import Groq
 from auth import register_user, login_user
 
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+try:
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except Exception:
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 MODEL_PATH   = os.path.join(os.path.dirname(__file__), "model.pkl")
 
 st.set_page_config(

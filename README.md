@@ -189,8 +189,9 @@ Step 12 ✅  Streamlit deployment — app.py + Groq AI assistant
 |--------|-----------|----------|-----------------|
 | `poor_health_days` | 43.02% | HIGH — DROPPED | 43% missing + redundant with `health_burden` |
 | `income` | 19.99% | MEDIUM | Group median by `education` + `employment` |
-| `smoking_status` | 15.82% | MEDIUM | Group mode by `age_group` + `education` |
+| `smoking_status` | 15.82% | MEDIUM | Group mode by `age_group` + `education` + `income` |
 | `physical_activity` | 14.40% | MEDIUM | Group mode by `age_group` + `bmi_category` |
+| `binge_drinking` | 7.44% | LOW | Group mode by `age_group` + `sex` + `income` |
 | `high_cholesterol` | 12.71% | MEDIUM | Rule-based: if `heart_disease=1` OR obese → 1, else → 0 |
 | `bmi` | 9.27% | LOW | Group median by `age_group` + `sex` |
 | `mental_health_days` | 5.82% | LOW | Group median by `depression` + `age_group` |
